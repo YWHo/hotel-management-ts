@@ -6,7 +6,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <div className="py-10 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap items-center justify-between">
+    <header className="py-10 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap items-center justify-between">
       <div className="flex items-center w-full md:w-2/3">
         <Link href="/" className="font-black text-tertiary-dark">
           Hotel
@@ -33,7 +33,7 @@ const Header = (props: Props) => {
           <Link href="/">Contact</Link>
         </li>
       </ul>
-    </div>
+    </header>
   );
 };
 
