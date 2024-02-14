@@ -1,6 +1,9 @@
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
+const inputStyles =
+  "border border-gray-300 sm:text-sm text-black rounded-lg black w-full p-2.5 focus:outline-none";
+
 type Props = {};
 
 const Auth = (props: Props) => {
@@ -17,6 +20,44 @@ const Auth = (props: Props) => {
             |<FcGoogle className="ml-3 text-4xl cursor-pointer"></FcGoogle>
           </span>
         </div>
+
+        <form className="space-y-4 md:space-y-6">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="John Doe"
+            required
+            minLength={2}
+            className={inputStyles}
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@company.com"
+            required
+            minLength={3}
+            className={inputStyles}
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            required
+            minLength={6}
+            className={inputStyles}
+          />
+          <button
+            type="submit"
+            className="w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <button className="text-blue-700 underline">login</button>
       </div>
     </section>
   );
